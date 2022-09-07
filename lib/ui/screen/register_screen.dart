@@ -1,7 +1,6 @@
+import 'package:sizer/sizer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sizer/sizer.dart';
-import 'package:to_do_list/core/services/services.dart';
 import 'package:to_do_list/ui/screen/login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -16,7 +15,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   String Materialtitle = 'Register';
   String? fontFamily = '';
-  bool debugShowCheckedModeBanner = true;
+  bool DebugBanner = false;
   ThemeData? theme;
   Color? backgroundColor;
   double Containerwidth = 450;
@@ -26,22 +25,33 @@ class _RegisterScreenState extends State<RegisterScreen> {
   double sizedBoxheight = 10;
   double ImageAssetwidth = 250;
   double ImageAssetheight = 250;
-  String ImageAssetname = 'assets/images/sample_image.png';
-  BorderRadiusGeometry BoxborderRadius = BorderRadius.circular(50);
-  EdgeInsetsGeometry LTRBpadding = const EdgeInsets.fromLTRB(10, 2, 10, 2);
-  EdgeInsetsGeometry Allpadding = const EdgeInsets.all(8.0);
-  String FirstnanelabelText = 'Firstname';
-  String LastnanelabelText = 'Lastname';
-  String UsernanelabelText = "Username";
-  String PasswordlabelText = "Password";
   double TextfontSize = 15;
+  double Text1fontSize = 12;
+  Color Textcolor = Colors.brown;
+  Color Iconcolor = Color(0xFF795548);
+  Color LinearGradient1 = Color(0xFF795548);
+  Color LinearGradient2 = Color(0xFFA1887F);
+  IconData Usericon = Icons.person;
+  IconData Passwordicon = Icons.lock;
+  IconData Visibilityicon = Icons.visibility;
+  String ImageAssetname = 'assets/images/sample_image.png';
+  String FirstnamelabelText = 'Firstname';
+  String LastnamelabelText = 'Lastname';
+  String UsernamelabelText = "Username";
+  String PasswordlabelText = "Password";
+  String Textdata = "Already have an Account?";
+  String TextButtondata = "Login";
+  String MaterialTextButtondata = "Register";
+  double BoxborderRadius = 50;
+  List LTRBpadding = [10, 2, 10, 2];
+  double Allpadding = 8.0;
 
   @override
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType) {
         return MaterialApp(
-          debugShowCheckedModeBanner: false,
+          debugShowCheckedModeBanner: DebugBanner,
           title: Materialtitle,
           theme: ThemeData(
             textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme).apply(bodyColor: Colors.brown),
@@ -51,62 +61,62 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    Padding(padding: LTRBpadding),
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(LTRBpadding[0], LTRBpadding[1], LTRBpadding[2], LTRBpadding[3]),
+                    ),
                     Container(
-                      padding: LTRBpadding,
-                      decoration: BoxDecoration(borderRadius: BoxborderRadius),
+                      padding: EdgeInsets.fromLTRB(LTRBpadding[0], LTRBpadding[1], LTRBpadding[2], LTRBpadding[3]),
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(BoxborderRadius)),
                       child: Image.asset(ImageAssetname, width: ImageAssetwidth, height: ImageAssetheight),
                     ),
                     SizedBox(height: sizedBoxheight),
                     Padding(
-                      padding: Allpadding,
+                      padding: EdgeInsets.all(Allpadding),
                       child: Column(
                         children: [
                           Container(
-                            padding: Allpadding,
+                            padding: EdgeInsets.all(Allpadding),
                             child: TextFormField(
                               keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
-                                labelText: FirstnanelabelText,
+                                labelText: FirstnamelabelText,
                                 border: const OutlineInputBorder(),
-                                prefixIcon: const Icon(Icons.person, color: Colors.brown),
+                                prefixIcon: Icon(Usericon, color: Textcolor),
                               ),
                               style: TextStyle(fontSize: TextfontSize),
                             ),
                           ),
                           SizedBox(height: sizedBoxheight),
                           Container(
-                            padding: LTRBpadding,
+                            padding: EdgeInsets.fromLTRB(LTRBpadding[0], LTRBpadding[1], LTRBpadding[2], LTRBpadding[3]),
                             child: TextFormField(
                               keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
-                                labelText: LastnanelabelText,
-                                border: OutlineInputBorder(),
-                                prefixIcon: Icon(Icons.person, color: Colors.brown),
+                                labelText: LastnamelabelText,
+                                border: const OutlineInputBorder(),
+                                prefixIcon: Icon(Usericon, color: Textcolor),
                               ),
                               style: TextStyle(fontSize: TextfontSize),
                             ),
                           ),
                           SizedBox(height: sizedBoxheight),
                           Container(
-                            padding: LTRBpadding,
+                            padding: EdgeInsets.fromLTRB(LTRBpadding[0], LTRBpadding[1], LTRBpadding[2], LTRBpadding[3]),
                             child: TextFormField(
                               keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
-                                labelText: UsernanelabelText,
-                                border: OutlineInputBorder(),
-                                prefixIcon: Icon(Icons.person, color: Colors.brown),
+                                labelText: UsernamelabelText,
+                                border: const OutlineInputBorder(),
+                                prefixIcon: Icon(Usericon, color: Textcolor),
                               ),
-                              style: const TextStyle(
-                                fontSize: 15,
-                              ),
+                              style: TextStyle(fontSize: TextfontSize),
                             ),
                           ),
                           SizedBox(height: sizedBoxheight),
                           Container(
-                            padding: LTRBpadding,
+                            padding: EdgeInsets.fromLTRB(LTRBpadding[0], LTRBpadding[1], LTRBpadding[2], LTRBpadding[3]),
                             decoration: BoxDecoration(
-                              borderRadius: BoxborderRadius,
+                              borderRadius: BorderRadius.circular(BoxborderRadius),
                             ),
                             child: TextFormField(
                               autocorrect: false,
@@ -115,7 +125,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               decoration: InputDecoration(
                                 labelText: PasswordlabelText,
                                 border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(5),
+                                  borderRadius: BorderRadius.circular(BoxborderRadius),
                                 ),
                                 suffixIcon: InkWell(
                                     onTap: () {
@@ -123,8 +133,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         _isHiddenPassword = !_isHiddenPassword;
                                       });
                                     },
-                                    child: const Icon(Icons.visibility, color: Color(0xFF795548))),
-                                prefixIcon: const Icon(Icons.lock, color: Colors.brown),
+                                    child: Icon(Visibilityicon, color: Iconcolor)),
+                                prefixIcon: Icon(Passwordicon, color: Iconcolor),
                               ),
                               style: TextStyle(fontSize: TextfontSize),
                             ),
@@ -137,40 +147,37 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "Already have an Account?",
-                          style: TextStyle(
-                            color: Colors.black.withOpacity(0.7),
-                            fontSize: 12,
-                          ),
+                          Textdata,
+                          style: TextStyle(color: Colors.black.withOpacity(0.7), fontSize: Text1fontSize),
                         ),
                         TextButton(
                           onPressed: () async {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
                           },
                           child: Text(
-                            "Login",
-                            style: TextStyle(color: Colors.brown, fontSize: TextfontSize),
+                            TextButtondata,
+                            style: TextStyle(color: Textcolor, fontSize: TextfontSize),
                           ),
                         ),
                       ],
                     ),
                     Padding(
-                      padding: Allpadding,
+                      padding: EdgeInsets.all(Allpadding),
                       child: Container(
-                        padding: LTRBpadding,
+                        padding: EdgeInsets.fromLTRB(LTRBpadding[0], LTRBpadding[1], LTRBpadding[2], LTRBpadding[3]),
                         height: Containerheight,
                         width: Containerwidth,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          gradient: const LinearGradient(
-                            colors: [Color(0xFF795548), Color(0xFFA1887F)],
+                          borderRadius: BorderRadius.circular(BoxborderRadius),
+                          gradient: LinearGradient(
+                            colors: [LinearGradient1, LinearGradient2],
                           ),
                         ),
                         child: MaterialButton(
                           onPressed: () {},
                           child: Text(
-                            "Register",
-                            style: TextStyle(fontSize: TextfontSize, color: Colors.white),
+                            MaterialTextButtondata,
+                            style: TextStyle(fontSize: TextfontSize, color: Textcolor),
                           ),
                         ),
                       ),
