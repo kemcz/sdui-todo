@@ -1,3 +1,4 @@
+import 'package:http/http.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,7 +29,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   double TextfontSize = 15;
   double Text1fontSize = 12;
   Color Textcolor = Colors.brown;
-  Color Iconcolor = Color(0xFF795548);
+  String iconColor = '0xFF795548';
   Color LinearGradient1 = Color(0xFF795548);
   Color LinearGradient2 = Color(0xFFA1887F);
   IconData Usericon = Icons.person;
@@ -45,6 +46,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
   double BoxborderRadius = 50;
   List LTRBpadding = [10, 2, 10, 2];
   double Allpadding = 8.0;
+  String textfontWeight = 'normal';
+
+  FontWeight getFontWeight(String fontweight) {
+    FontWeight _fontweight = FontWeight.normal;
+    if (fontweight.toLowerCase() == 'normal') _fontweight = FontWeight.normal;
+    if (fontweight.toLowerCase() == 'bold') _fontweight = FontWeight.bold;
+    return _fontweight;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +118,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 border: const OutlineInputBorder(),
                                 prefixIcon: Icon(Usericon, color: Textcolor),
                               ),
-                              style: TextStyle(fontSize: TextfontSize),
+                              style: TextStyle(
+                                fontWeight: getFontWeight(textfontWeight),
+                                fontSize: TextfontSize,
+                              ),
                             ),
                           ),
                           SizedBox(height: sizedBoxheight),
@@ -133,8 +145,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         _isHiddenPassword = !_isHiddenPassword;
                                       });
                                     },
-                                    child: Icon(Visibilityicon, color: Iconcolor)),
-                                prefixIcon: Icon(Passwordicon, color: Iconcolor),
+                                    child: Icon(Visibilityicon, color: Color(int.parse(iconColor)))),
+                                prefixIcon: Icon(Passwordicon, color: Color(int.parse(iconColor))),
                               ),
                               style: TextStyle(fontSize: TextfontSize),
                             ),
@@ -177,7 +189,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           onPressed: () {},
                           child: Text(
                             MaterialTextButtondata,
-                            style: TextStyle(fontSize: TextfontSize, color: Textcolor),
+                            style: TextStyle(
+                              fontSize: TextfontSize,
+                              color: Textcolor,
+                              fontWeight: getFontWeight(textfontWeight),
+                            ),
                           ),
                         ),
                       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:to_do_list/core/sdui/test_param.dart';
 import 'package:to_do_list/ui/screen/login_screen.dart';
 import 'package:to_do_list/core/provider/todo_provider.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
               bodyColor: Colors.brown,
             ),
           ),
-          home: const LoginScreen(),
+          home: const TestScreen(),
         ),
       );
 }

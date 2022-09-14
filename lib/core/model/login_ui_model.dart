@@ -79,15 +79,15 @@ class Field {
 }
 
 class Design {
-  String? hexColor;
+  String? color;
   int? fontsize;
   int? padding;
   String? visibility;
 
-  Design({this.hexColor, this.fontsize, this.padding, this.visibility});
+  Design({this.color, this.fontsize, this.padding, this.visibility});
 
   Design.fromJson(Map<String, dynamic> json) {
-    hexColor = json['hexColor'];
+    color = json['color'];
     fontsize = json['fontsize'];
     padding = json['padding'];
     visibility = json['visibility'];
@@ -95,7 +95,7 @@ class Design {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['hexColor'] = this.hexColor;
+    data['color'] = this.color;
     data['fontsize'] = this.fontsize;
     data['padding'] = this.padding;
     data['visibility'] = this.visibility;

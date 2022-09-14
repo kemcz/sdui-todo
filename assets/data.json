@@ -1,40 +1,47 @@
 {
- "code": "00",
- "message": "Welcome",
- "data": {
-  "field": [
-
-   {
-    "fieldName" : "Username",
-    "fieldType": "text",
-    "widgetType": "textField",
-    "isShown": true,
-    "isEnabled": true,
-    "design": {"hexColor": "674736", "fontsize": 5, "padding": 2, "visibility": "true"}
-   },
-   {
-    "fieldName" : "Password",
-    "fieldType": "text",
-    "widgetType": "textField",
-    "isShown": true,
-    "isEnabled": true,
-    "design": {"hexColor": "674736", "fontsize": 5, "padding": 2, "visibility": "true"}
-   },
-   { "fieldName": "Register Account",
-    "fieldType": "button",
-    "widgetType": "TextButton",
-    "isShown": true,
-    "isEnabled": true,
-    "design": {"hexColor": "674736", "fontsize": 1, "padding": 2, "visibility": "false"}
-   },
-   { "fieldName": "LOGIN",
-    "fieldType": "button",
-    "widgetType": "MaterialButton",
-    "isShown": true,
-    "isEnabled": true,
-    "design": {"hexColor": "674736", "fontsize": 1, "padding": 2, "visibility": "false"}
-   }
-  ]
- }
+  "code": "00",
+  "message": "Welcome",
+  "data": {
+    "field": [
+      {
+        "fieldName": "Username",
+        "fieldType": "text",
+        "widgetType": "textField",
+        "isShown": true,
+        "isEnabled": false,
+        "design": {
+          "color": "795548",
+          "fontsize": 12,
+          "padding": 2,
+          "visibility": "true"
+        }
+      },
+      {
+        "fieldName": "Password",
+        "fieldType": "text",
+        "widgetType": "textField",
+        "isShown": true,
+        "isEnabled": true,
+        "design": {
+          "color": "795548",
+          "fontsize": 12,
+          "padding": 2,
+          "visibility": "false"
+        }
+      },
+      {
+        "fieldName": "This is a Button",
+        "fieldType": "text",
+        "widgetType": "textButton",
+        "isShown": true,
+        "isEnabled": true,
+        "design": {
+          "color": "795548",
+          "fontsize": 12,
+          "padding": 2,
+          "visibility": "false"
+        }
+      }
+    ]
+  }
 }
-

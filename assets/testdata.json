@@ -1,0 +1,126 @@
+{
+  "code": "00",
+  "message": "Welcome",
+  "data": {
+    "field": [
+      {
+        "title": "Username",
+        "widgetType": "TextField",
+        "designs": {
+          "controller": "usernameController",
+          "keyboardType": "TextInputType.emailAddress",
+          "obscureText": "false",
+          "autofocus": "false",
+          "autocorrect": "false",
+          "cursorWidth": 2,
+          "cursorHeight": 30,
+          "textDirection": 1,
+          "textAlign": 1,
+          "maxLines": 1,
+          "clipBehavior": 1,
+          "enableIMEPersonalizedLearning": "false",
+          "enableInteractiveSelection": "false",
+          "enableSuggestions": "false",
+          "expands": "false",
+          "keyboardAppearance": 1,
+          "maxLength": 35,
+          "minLines": 1,
+          "enabled": "true",
+          "readOnly": "false",
+          "showCursor": "true",
+          "scribbleEnabled": "false",
+          "dragStartBehavior": 1,
+          "textAlignVertical": "center",
+          "textCapitalization": 1,
+          "textInputAction": 1,
+          "toolbarOptions": {
+            "copy": "false"
+          },
+          "selectionHeightStyle": 1,
+          "selectionWidthStyle": 1,
+          "scrollPadding": 20.0,
+          "maxLengthEnforcement": 1,
+          "mouseCursor": "textable",
+          "textFieldcursorRadius": 20,
+          "cursorColor": "0xFFA1887F",
+          "strutStyle": {
+            "package": "",
+            "leading": 1,
+            "fontSize": 12,
+            "height": 2,
+            "fontFamily": "Poppins",
+            "forceStrutHeight": "false",
+            "fontStyle": "normal",
+            "fontFamilyFallback": "false",
+            "leadingDistribution": 1
+          },
+          " decoration": {
+            "labelText": "Username",
+            "hintText": "",
+            "alignLabelWithHint": "true",
+            "contentPadding": 10,
+            "border": {
+              "borderRadius": 1
+            },
+            "constraints": {
+              "maxHeight": "infinity",
+              "minWidth": "infinity"
+            },
+            "counter": {
+              "widthFactor": 10,
+              "heightFactor": 10
+            },
+            "counterStyle": {
+              "backgroundColor": "0xFFA1887F",
+              "fontWeight": "normal",
+              "color": "0xFFA1887F",
+              "debugLabel": "",
+              "decoration": "none",
+              "decorationColor": "0xFFA1887F",
+              "decorationStyle": 1,
+              "decorationThickness": 0,
+              "fontFamily": "Poppins",
+              "fontFamilyFallback": "false",
+              "fontFeatures": "false",
+              "fontSize": 12,
+              "fontStyle": "normal",
+              "height": 10,
+              "inherit": "false",
+              "leadingDistribution": 1,
+              "letterSpacing": 0,
+              "overflow": 1,
+              "shadows": "false",
+              "textBaseline": 1,
+              "wordSpacing": 0,
+              "package": ""
+            },
+            "style": {
+              "wordSpacing": 0,
+              "textBaseline": 1,
+              "shadows": "false",
+              "package": "",
+              "overflow": 1,
+              "letterSpacing": 0,
+              "leadingDistribution": 1,
+              "inherit": "true",
+              "height": 1,
+              "fontSize": 15,
+              "fontFeatures": "false",
+              "fontFamilyFallback": "false",
+              "fontFamily": "Poppins",
+              "decorationThickness": 0,
+              "decorationStyle": 1,
+              "decorationColor": "0xFFA1887F",
+              "decoration": "normal",
+              "debugLabel": "",
+              "color": "0xFFA1887F",
+              " fontWeight": "normal",
+              " backgroundColor": "0xFFFFFFFF",
+              "fontStyle": "normal"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
